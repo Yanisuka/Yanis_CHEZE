@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xml:lang="fr" lang="fr">
+ <head>
+ <title>TP JS Yanis CHEZE</title> 
+ <meta http-equiv="content-type"
+ content="text/html;charset=utf-8" />
+ <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+ </head>
+ <body>
+
+<h1>TP Javascript</h1>
+
+<h2>Exercice 1</h2>
+
+
+<script type="text/javascript">
+	
+	document.write("Ceci est une ligne de texte <br>");
+
+	document.write("<p> ensemble de paragraphes 1 </p> <p> ensemble de paragraphes 2 </p> <p> ensemble de paragraphes 3 </p> <b> Texte en gras </b>");
+
+	document.write("<table border="+1+"><tr><td>premiere case</td><td>seconde case</td> <td>troisieme case</td></tr><tr><td>et voici</td><td>une seconde <td>ligne</td></tr></table>");
+
+
+	// var nom = window.prompt("Nom : ");
+	// document.write("Bienvenue " +nom+ "");
+
+</script>
+
+<h2>Exercice 2</h2>
+
+<script type="text/javascript">
+	
+var nb = 20 ;
+
+var chaine = "Ceci est une chaine de caractere" ; 
+
+document.write("Valeur nombre : " +nb+" <br>");
+
+document.write("Valeur chaine : " +chaine+" <br>");
+
+document.write("Valeur nombre + chaine : " +nb+" "+chaine+" <br>");
+
+var nb1 = 5;
+var nb2 = 9;
+var nb3 = 17;
+var nb4 = 28;
+
+
+document.write("<table width="+100+" border="+1+"><tr><td>"+nb1+"</td><td>"+nb2+"</td></tr><tr><td>"+nb3+"</td><td>"+nb4+"</td></tr></table>")
+
+</script>
+
+<h2>Exercice 3</h2>
+
+<script type="text/javascript" src="exercice3.js"></script>
+
+
+
+<h2>Exercice 4</h2>
+
+<input type="button" value="Cliquez ici" onclick="buttonalert()">
+
+<br>
+
+<a href="youtube.com" onmouseover="alertMouse()"> Alert avec l'évènement onMouse </a>
+
+<script type="text/javascript"> 
+
+function buttonalert()
+{
+alert("Vous venez de cliquer sur le bouton!")
+}
+
+function alertMouse(){
+
+var param = "Parametre 1";
+
+alert("Evenement onMouse ! " +param)
+
+}
+
+</script>
+
+
+<h2>Exercice 5</h2>
+
+<p style="color: red" onclick="condIf()"> Cliquez ici pour faire l'exo 5 (if)</p>
+
+<p style="color: green" onclick="condFor()"> Cliquez ici pour faire l'exo 5 (for 1 à 10)</p>
+
+<p style="color: blue" onclick="condForTab()"> Cliquez ici pour faire l'exo 5 (for Tableau)</p>
+
+
+<script type="text/javascript">
+	
+function condIf(){
+
+	var nombre = window.prompt("Nombre à saisir : ");
+
+	if (nombre < 10){
+
+		document.write("inférieur à 10");
+	}
+
+	else {
+
+		document.write("supérieur à 10");
+	}
+
+}
+
+function condFor(){
+
+	for (nb = 1; nb < 11 ; nb ++){
+
+		document.write(nb);
+
+			}
+
+
+}
+
+function condForTab(){
+
+	document.write("<table border="+1+">")
+
+	for (nb = 1; nb < 11 ; nb ++){
+
+		document.write("<tr>");
+
+		document.write("<td> "+nb+"</td>");
+
+
+	}
+
+		for (i = 1 ; i<11; i++){
+
+		document.write("<td>"+i+"</td>");
+
+	}
+			document.write("</tr>");
+			document.write("</table>");
+
+
+}
+
+</script>
+
+
+<h2>Exercice 6</h2>
+
+<h3>Saisir texte sur case à gauche</h3>
+
+		<form>
+
+		<input type="text" name="text1" id="text1" value="" onkeyup="fonctKeyup()" >
+
+		<input type="text" name="text2" id="text2" >
+
+		</form>
+
+		<br> <br>
+
+		<h3>Pays et Capitale</h3>
+
+		<select name="Pays" id="pays" onchange="capitale()">
+        <option>--- Choisissez un Pays ---</option>
+        <option value="1">Allemagne</option>
+        <option value="2">Etats-Unis</option>
+        <option value="3">Portugale</option>
+        <option value="4">France</option>
+        </select>
+
+
+        <input type="text" name="capitale" id="capitale">
+
+        <br><br>
+
+		<script type="text/javascript">
+			
+			function fonctKeyup(){
+
+				var cop = document.getElementById("text1").value;
+
+				document.getElementById("text2").value=cop;
+			}
+
+
+			function capitale(){
+
+				var pays = document.getElementById("pays");
+				var value = pays.options[pays.selectedIndex].value;
+				var text = pays.options[pays.selectedIndex].text;
+
+				var berlin = "Berlin";
+				var dc = "Washington DC";
+				var portugal = "Lisbonne";
+				var france = "Paris";
+
+
+				if (value == 1){
+
+					document.getElementById("capitale").value=berlin;
+
+				}
+
+				else if (value == 2){
+
+					document.getElementById("capitale").value=dc;
+
+				}
+				else if (value == 3){
+
+					document.getElementById("capitale").value=portugal;
+
+				}
+
+				else if (value == 4){
+
+					document.getElementById("capitale").value=france;
+
+				}
+
+			}
+
+		</script>
+
+
+		<h2>Exercice 8</h2>
+
+		<p onclick="openWindow()"> Cliquez ici pour ouvrir une page </p>
+
+		<p onclick="closeWindow()"> Cliquez ici pour fermer la page </p>
+
+				<!-- Trigger/Open The Modal -->
+		<button id="myBtn">Ouvrir une console</button>
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <p>Nouvelle Console</p>
+		  </div>
+
+		</div>
+
+		<script type="text/javascript">
+
+			function openWindow(){
+
+				fenetre = window.open('fenetreexo8.html');
+
+			}
+			
+			function closeWindow(){
+
+				fenetre.close();
+			}
+
+			// Get the modal
+			var modal = document.getElementById("myModal");
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on the button, open the modal
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+			    modal.style.display = "none";
+			  }
+			}
+
+		</script>
+
+		<h2>Exercice 9</h2>
+
+		<p> email  : </p> <input type="email" name="email" id="email" onchange="validate()"> <br>
+
+		<p> Telephone : </p> <input type="tel" name="tel" id="tel" onchange="validTel()">
+
+		<p> Login : </p> <input type="text" name="login" id="login">
+
+		<p> Mdp : </p> <input type="password" name="mdp" id="mdp">
+
+		<input type="button" name="buttlogmdp" id="buttonmdp" value="Vérifier" onclick="verifLogMdp()">
+
+		<script type="text/javascript">
+
+		function checkEmail(email) {
+             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+             return re.test(email);
+         }
+         function validate() {
+             var email = document.getElementById("email").value;
+         
+             if (checkEmail(email)) {
+                 alert('Adresse e-mail valide');
+             } else {
+                 alert('Adresse e-mail non valide');
+             }
+             return false;
+         }
+
+
+         function validTel(tel)
+				{
+				  var regex = /^(0|(00|\+)33)[67][0-9]{8}$/;
+
+				   var tel = document.getElementById("tel").value;
+				    
+				    if (regex.test(tel))
+				    {
+				        alert("tel valide");
+				    }
+				    else
+				    {
+				       alert("tel pas valide");
+				    }
+
+				}
+
+		function verifLogMdp(){
+
+			var login1 = "Yanis";
+			var mdp1 = "pass";
+
+			var log = document.getElementById("login").value;
+			var mdp = document.getElementById("mdp").value;
+
+			if (log == login1 && mdp == mdp1) {
+
+					alert("Login et Mdp correct");
+			} else {
+
+					alert("Login et Mdp incorrect");
+
+			}
+
+
+		}
+		</script>
+
+		<h2>Exercice 10</h2>
+
+		<img id="image1" src="image1.jpg" onmouseover="changeImage();" />
+
+		<script type="text/javascript">
+			
+			function changeImage(){
+			  document.getElementById('image1').src='image2.jpg';
+			}
+
+		</script>
+
+ </body>
+
+ </html>
