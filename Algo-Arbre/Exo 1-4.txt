@@ -1,0 +1,27 @@
+1) Taille : 4
+   Hauteur : 2
+   Parcours largeur : 19, 11, 21, 3
+   LCI : 1
+   LCE : 3
+   Nombre total d'arbre : 8
+
+2) Taille : 5
+   Hauteur : 2
+   Parcours largeur : 77, 63, 109, 68, 81
+   LCI : 2
+   LCE : 4
+   Nombre total d'arbre : 11
+
+3) Taille : 5
+   Hauteur : 3
+   Parcours largeur : 107, 133, 167, 151, 183
+   LCI : 3
+   LCE : 6
+   Nombre total d'arbre : 11
+
+4) Taille : 7
+   Hauteur : 3
+   Parcours largeur : 17, 11, 23, 15, 19, 44, 18
+   LCI : 4
+   LCE : 7
+   Nombre total d'arbre : 15
